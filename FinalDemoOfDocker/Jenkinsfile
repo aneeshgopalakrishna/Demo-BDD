@@ -1,5 +1,6 @@
 node{
 stage('build'){
-bat 'mvn package'
+git credentialsId: 'a021c5a4-70e5-467d-b6f2-e8719030d397', url: 'https://github.com/aneeshgopalakrishna/Demo-BDD.git'
 }
+
 }
