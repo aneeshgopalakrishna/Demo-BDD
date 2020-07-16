@@ -1,25 +1,19 @@
-pipeline {
-    agent any
+node{
+stage('checkout'){
 git credentialsId: 'c256e58d-bd81-4070-8ee8-4935e50ee86c', url: 'https://github.com/aneeshgopalakrishna/Demo-BDD.git'
-    stages {
-        stage('Build') {
-            steps {
-            
-                echo 'Building..'
-                bat 'mvn package'
-            }
-        }
-        stage('Jar Deploy') {
-            steps {
-                echo 'Jar Deployed...'
-                archiveArtifacts artifacts: '**/target/*.jar'
-            }
-        }
-         steps {
-                echo 'Jar Running...'
-               bat 'java -jar FinalDemoOfDocker-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
-            }
-        }
-        
-    }
+}
+
+
+stage('build'){
+bat 'mvn package'
+}
+
+stage('deploy'){
+archiveArtifacts 'target/*.jar'
+}
+stage('run'){
+bat 'java -jar FinalDemoOfDocker-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
+}
+
+
 }
