@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Jar Deploy') {
             steps {
-                echo 'Jar Deployed..'
+                echo 'Jar Deployed...'
                 archiveArtifacts artifacts: '**/target/*.jar'
             }
         }
