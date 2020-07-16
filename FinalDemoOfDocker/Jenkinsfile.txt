@@ -6,6 +6,7 @@ git credentialsId: 'c256e58d-bd81-4070-8ee8-4935e50ee86c', url: 'https://github.
 
 stage('build'){
 bat 'mvn package'
+echo 'building'
 }
 
 stage('deploy'){
