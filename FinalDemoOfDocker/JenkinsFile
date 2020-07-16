@@ -16,7 +16,7 @@ pipeline {
             }
         }
          steps {
-                echo 'Jar Running..'
+                echo 'Jar Running...'
                bat 'java -jar FinalDemoOfDocker-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
             }
         }
