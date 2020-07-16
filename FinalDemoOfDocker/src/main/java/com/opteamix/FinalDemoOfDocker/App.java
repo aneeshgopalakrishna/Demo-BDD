@@ -21,7 +21,7 @@ class App{
 		System.out.println("Screen Maximized");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		System.out.println("Loading the link of Google");
-		System.out.println("Loading the link of Google for second time for jenkins pipeline demo");
+		System.out.println("Loading the link of Google for second time for jenkins pipe demo");
 		WebElement searchBox=null;
 		for(int i=0;i<50;i++) {
 		File file = new File("/TextFile.txt");   
