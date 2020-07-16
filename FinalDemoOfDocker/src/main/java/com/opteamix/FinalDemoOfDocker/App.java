@@ -21,17 +21,16 @@ class App{
 		System.out.println("Screen Maximized");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		System.out.println("Loading the link of Google");
+		System.out.println("Loading the link of Google for second time");
 		WebElement searchBox=null;
 		for(int i=0;i<50;i++) {
 		File file = new File("/TextFile.txt");   
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String st;
-		
 		while ((st = br.readLine()) != null) {
 			System.out.println(st);
 		driver.get("http://www.google.com/");
 		System.out.println("Loaded the link of Google");
-		
 		searchBox = driver.findElement(By.name("q"));
 		searchBox.sendKeys(st);
 		Thread.sleep(5000);
@@ -44,7 +43,6 @@ class App{
 		break;
 		}
 		}
-	
 		driver.quit(); 
 	}
 }
