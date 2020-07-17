@@ -23,7 +23,7 @@ class App{
 		System.out.println("Loading the link of Google");
 		System.out.println("Loading the link of Google for second time. for jenkins pipe demo");
 		WebElement searchBox=null;
-		for(int i=0;i<50;i++) {
+		for(int i=0;i<40;i++) {
 		File file = new File("/TextFile.txt");   
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String st;
