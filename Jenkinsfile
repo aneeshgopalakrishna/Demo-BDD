@@ -52,7 +52,7 @@ pipeline
             '''
         }
         }
-         stage('docker image stop{
+         stage('docker image stop'){
             steps{
             bat '''
            cd FinalDemoOfDocker
