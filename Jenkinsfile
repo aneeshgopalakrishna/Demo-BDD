@@ -32,6 +32,15 @@ pipeline
           docker container prune -f
             '''
         }
+        
+              stage('docker stopping all container'){
+            steps{
+            bat"
+            
+            FOR /f "tokens=*" %i IN ('docker ps -q') DO docker stop %i
+         
+            "
+        }
         }
         stage('docker  default image running'){
             steps{
