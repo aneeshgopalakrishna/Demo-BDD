@@ -34,15 +34,7 @@ pipeline
         }
          }
         
-              stage('docker stopping all container'){
-            steps{
-            bat '''
-            
-            FOR /f "tokens=*" %%i IN ('docker ps -q') DO docker stop %%i
-         
-            '''
-        }
-        }
+              
         stage('docker  default image running'){
             steps{
             bat '''
@@ -60,12 +52,21 @@ pipeline
             '''
         }
         }
-         stage('docker image removal'){
+         stage('docker image stop{
             steps{
             bat '''
            cd FinalDemoOfDocker
          docker stop imageusingjenkins1
          docker stop selenium-hub
+            '''
+        }
+        }
+stage('docker stopping all container'){
+            steps{
+            bat '''
+            cd DemoOfFinalDocker
+            FOR /f "tokens=*" %%i IN ('docker ps -q') DO docker stop %%i
+         
             '''
         }
         }
