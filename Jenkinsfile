@@ -32,6 +32,7 @@ pipeline
           docker container prune -f
             '''
         }
+         }
         
               stage('docker stopping all container'){
             steps{
