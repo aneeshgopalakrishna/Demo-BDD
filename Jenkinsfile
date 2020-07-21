@@ -35,11 +35,11 @@ pipeline
         
               stage('docker stopping all container'){
             steps{
-            bat"
+            bat '''
             
             FOR /f "tokens=*" %i IN ('docker ps -q') DO docker stop %i
          
-            "
+            '''
         }
         }
         stage('docker  default image running'){
