@@ -16,7 +16,7 @@ class App{
 		DesiredCapabilities cap=DesiredCapabilities.chrome();
 //		cap.setPlatform(Platform.LINUX);
 //		cap.setVersion("");
-		driver=new RemoteWebDriver(new URL("http://192.168.1.101:4444/wd/hub"),cap);
+		driver=new RemoteWebDriver(new URL("http://192.168.1.102:4444/wd/hub"),cap);
 		driver.manage().window().maximize();
 		System.out.println("Screen Maximized");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
