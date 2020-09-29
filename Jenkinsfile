@@ -6,13 +6,11 @@ pipeline {
        
          
         stage('Build') { 
-           agent {
-                docker { image 'maven:3-alpine' }
-            }
+           
             steps {
                  sh '''
                  cd FinalDemoOfDocker
-            mvn package
+            mvn --v
             
             '''
             }
