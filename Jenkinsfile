@@ -8,11 +8,13 @@ pipeline {
         stage('Build') { 
            
             steps {
-                 sh '''
-                 cd FinalDemoOfDocker
-            mvn --v
+                dir('FinalDemoOfDocker'){
+                    
+                 sh label:'' ,script: 'mvn package'
+                
+          
             
-            '''
+            
             }
         }
     }
