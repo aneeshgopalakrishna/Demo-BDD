@@ -10,7 +10,7 @@ pipeline {
                 steps{
                     
                 dir('FinalDemoOfDocker'){
-                 script  "mvn package"
+                 sh  "mvn package"
                 
                 
             }
