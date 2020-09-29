@@ -6,10 +6,10 @@ pipeline {
         stage('Build'){
            
                 steps{
-                     withMaven(maven:'mvn'){
+                     
                 dir('FinalDemoOfDocker'){
-                 bat  "mvn package"
-                }
+                 sh  "mvn package"
+                
                 }
             }
         }
