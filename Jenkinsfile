@@ -8,7 +8,7 @@ pipeline {
                 steps{
                      withMaven(maven:'mvn'){
                 dir('FinalDemoOfDocker'){
-                 sh  "mvn package"
+                 bat  "mvn package"
                 }
                 }
             }
