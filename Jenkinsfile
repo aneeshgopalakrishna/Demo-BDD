@@ -12,7 +12,7 @@ pipeline {
                 dir('FinalDemoOfDocker'){
                  script  "mvn package"
                 
-                }
+                
             }
         }
     }
