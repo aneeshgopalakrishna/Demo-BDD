@@ -10,7 +10,7 @@ pipeline {
             steps {
                 dir('FinalDemoOfDocker'){
                     
-                 sh label:'' ,script: 'mvn package'
+                 sh label:'docker-slave' ,script: 'mvn package'
                 
           
             
