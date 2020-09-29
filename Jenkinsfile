@@ -1,8 +1,6 @@
 pipeline {
     agent {
-         docker {
-            image 'maven:3-alpine' 
-            args '-v /root/.m2:/root/.m2' 
+        label:'docker-slave'
         }
     }
    
@@ -10,10 +8,10 @@ pipeline {
         stage('Build'){
            
                 steps{
-                    withMaven(maven: 'mvn'){
+                    
                 dir('FinalDemoOfDocker'){
-                 sh  "mvn package"
-                }
+                 script  "mvn package"
+                
                 }
             }
         }
