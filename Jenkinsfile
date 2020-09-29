@@ -1,10 +1,10 @@
 pipeline {
-   
+    agent { label 'trial' }
     stages {
        
          
         stage('Build') { 
-            agent { label 'trial' }
+           
             steps {
                  sh '''
             cd FinalDemoOfDocker
