@@ -9,8 +9,8 @@ pipeline {
            
             steps {
                  sh '''
-            cd FinalDemoOfDocker
-            mvn package
+            docker build -t newimage1
+            
             '''
             }
         }
