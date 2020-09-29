@@ -4,8 +4,9 @@ pipeline {
     }
     stages {
         stage('Build'){
-            withMaven(maven:'mvn'){
+           
                 steps{
+                     withMaven(maven:'mvn'){
                 dir('FinalDemoOfDocker'){
                  sh  "mvn package"
                 }
