@@ -3,19 +3,16 @@ pipeline {
         label 'docker-slave'
     }
     stages {
-       
-         
-        stage('Build') { 
-           
             steps {
                 dir('FinalDemoOfDocker'){
-                    
-                 sh label:'docker-slave' ,script: 'mvn package'
+                 sh script: 'mvn package'
+                }
+            }
+    }
+}
+
                 
           
             
-            
-            }
-        }
-    }
-}
+    
+
