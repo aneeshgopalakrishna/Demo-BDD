@@ -4,7 +4,7 @@ pipeline {
         }
    environment {
     registry = "aneeshgopalakrishna/trial"
-    registryCredential = ‘dockerhub’
+    registryCredential = "Vasista@123"
   }
     
    
